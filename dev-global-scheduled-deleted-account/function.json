@@ -1,0 +1,27 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "cosmosDB",
+      "name": "scheduled",
+      "databaseName": "verduzco-dev-one",
+      "collectionName": "ver-help-center",
+      "createIfNotExists": false,
+      "connectionStringSetting": "DB",
+      "direction": "out"
+    }
+  ]
+}

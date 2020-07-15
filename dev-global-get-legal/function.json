@@ -1,0 +1,36 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "cosmosDB",
+      "name": "acceptance",
+      "databaseName": "verduzco-dev-one",
+      "collectionName": "ver-help-center",
+      "connectionStringSetting": "DB",
+      "direction": "in",
+      "sqlQuery": "SELECT a.terms_and_conditions, a.privacy_policy FROM a WHERE a.type = 'acceptance' AND a.user_id = {id}"
+    },
+    {
+      "type": "cosmosDB",
+      "name": "policy",
+      "databaseName": "verduzco-dev-one",
+      "collectionName": "ver-help-center",
+      "connectionStringSetting": "DB",
+      "direction": "in",
+      "sqlQuery": "SELECT p.version, p.show_update, p.document FROM p WHERE p.type = 'policy' AND p.active = true AND p.document = 'terms_and_conditions' OR p.document = 'privacy_policy' ORDER BY p.document DESC"
+    }
+  ]
+}

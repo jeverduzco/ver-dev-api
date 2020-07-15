@@ -1,0 +1,27 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "cosmosDB",
+      "name": "subscription",
+      "databaseName": "verduzco-dev-one",
+      "collectionName": "ver_cus_and_subs",
+      "connectionStringSetting": "DB",
+      "direction": "in",
+      "sqlQuery": "SELECT s.status FROM s WHERE s.type = 'subscription' AND s.product = 'prod_HF1ZdaR45iVoYl' AND s.customer = {id} ORDER BY s.created DESC"
+    }
+  ]
+}

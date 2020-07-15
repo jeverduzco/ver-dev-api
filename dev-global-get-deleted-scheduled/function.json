@@ -1,0 +1,27 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "cosmosDB",
+      "name": "scheduled",
+      "databaseName": "verduzco-dev-one",
+      "collectionName": "ver-help-center",
+      "connectionStringSetting": "DB",
+      "direction": "in",
+      "sqlQuery": "SELECT s.date, s.end_date, s.status FROM s WHERE s.type = 'account_deleted' AND s.status = 'processing' AND s.user_id = {id}"
+    }
+  ]
+}

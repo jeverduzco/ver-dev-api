@@ -1,0 +1,36 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "name": "existingCustomer",
+      "databaseName": "verduzco-dev-one",
+      "collectionName": "ver_cus_and_subs",
+      "connectionStringSetting": "DB",
+      "sqlQuery": "SELECT c.id FROM c WHERE c.type = 'customer' AND c.customer_id = {customer_id}",
+      "direction": "in",
+      "type": "cosmosDB"
+    },
+    {
+      "name": "newCustomer",
+      "direction": "out",
+      "type": "cosmosDB",
+      "databaseName": "verduzco-dev-one",
+      "collectionName": "ver_cus_and_subs",
+      "createIfNotExists": false,
+      "connectionStringSetting": "DB"
+    }
+  ]
+}

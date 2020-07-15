@@ -1,0 +1,27 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "cosmosDB",
+      "name": "policy",
+      "databaseName": "verduzco-dev-one",
+      "collectionName": "ver-help-center",
+      "connectionStringSetting": "DB",
+      "direction": "in",
+      "sqlQuery": "SELECT p.title, p.title_en, p.content_es, p.content_en, p.version, p.release_date FROM p WHERE p.type = 'policy' AND p.active = true AND p.document = 'legal_notice'"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "cosmosDB",
+      "name": "projects",
+      "databaseName": "verduzco-dev-one",
+      "collectionName": "bolitru-client-data",
+      "connectionStringSetting": "DB",
+      "direction": "in",
+      "sqlQuery": "SELECT p.id, p.name FROM Projects p WHERE p.owner = {owner} AND p.type = 'project' ORDER BY p.created DESC"
+    }
+  ]
+}
