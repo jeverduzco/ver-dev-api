@@ -21,7 +21,7 @@
       "collectionName": "ver-blog-posts",
       "connectionStringSetting": "DB",
       "direction": "in",
-      "sqlQuery": "SELECT p.name, p.name_en, p.category, p.linkedin_url, p.linkedin_url_en, p.twitter_url, p.twitter_url_en, p.category_en, p.created, p.url, p.url_en, p.cover, p.id, p.content, p.content_en, p.description, p.description_en FROM p WHERE p.url = {url} OR p.url_en = {url} AND p.published = true"
+      "sqlQuery": "SELECT p.name, p.name_en, p.category, p.linkedin_url, p.linkedin_url_en, p.category_en, p.created, p.url, p.url_en, p.cover, p.id, p.content, p.content_en, p.description, p.description_en FROM p WHERE p.url = {url} OR p.url_en = {url} AND p.published = true"
     }
   ]
 }
