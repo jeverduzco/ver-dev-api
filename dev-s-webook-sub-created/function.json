@@ -18,7 +18,7 @@
       "name": "saveSubscription",
       "direction": "out",
       "type": "cosmosDB",
-      "databaseName": "verduzco-dev-one",
+      "databaseName": "verduzco-dev-one-dev",
       "collectionName": "ver_cus_and_subs",
       "createIfNotExists": false,
       "connectionStringSetting": "DB"

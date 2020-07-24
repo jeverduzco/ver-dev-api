@@ -17,7 +17,7 @@
     {
       "type": "cosmosDB",
       "name": "scheduled",
-      "databaseName": "verduzco-dev-one",
+      "databaseName": "verduzco-dev-one-dev",
       "collectionName": "ver-help-center",
       "createIfNotExists": false,
       "connectionStringSetting": "DB",

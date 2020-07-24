@@ -17,7 +17,7 @@
     {
       "type": "cosmosDB",
       "name": "posts",
-      "databaseName": "verduzco-dev-one",
+      "databaseName": "verduzco-dev-one-dev",
       "collectionName": "ver-blog-posts",
       "connectionStringSetting": "DB",
       "direction": "in",

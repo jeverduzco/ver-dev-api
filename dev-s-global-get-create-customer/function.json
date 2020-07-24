@@ -16,7 +16,7 @@
     },
     {
       "name": "existingCustomer",
-      "databaseName": "verduzco-dev-one",
+      "databaseName": "verduzco-dev-one-dev",
       "collectionName": "ver_cus_and_subs",
       "connectionStringSetting": "DB",
       "sqlQuery": "SELECT c.id FROM c WHERE c.type = 'customer' AND c.customer_id = {customer_id}",
@@ -27,7 +27,7 @@
       "name": "newCustomer",
       "direction": "out",
       "type": "cosmosDB",
-      "databaseName": "verduzco-dev-one",
+      "databaseName": "verduzco-dev-one-dev",
       "collectionName": "ver_cus_and_subs",
       "createIfNotExists": false,
       "connectionStringSetting": "DB"
