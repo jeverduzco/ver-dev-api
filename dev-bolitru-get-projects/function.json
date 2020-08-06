@@ -21,7 +21,7 @@
       "collectionName": "bolitru-client-data",
       "connectionStringSetting": "DB",
       "direction": "in",
-      "sqlQuery": "SELECT p.id, p.name FROM Projects p WHERE p.owner = {owner} AND p.type = 'project' ORDER BY p.created DESC"
+      "sqlQuery": "SELECT p.id, p.name, p.description FROM Projects p WHERE p.owner = {owner} AND p.type = 'project' ORDER BY p.created DESC"
     }
   ]
 }
