@@ -18,7 +18,7 @@
       "type": "cosmosDB",
       "name": "calculation",
       "databaseName": "verduzco-dev-one-dev",
-      "collectionName": "ver_cus_and_subs",
+      "collectionName": "bolitru-client-data",
       "connectionStringSetting": "DB",
       "direction": "in",
       "partitionKey": "{key}",
