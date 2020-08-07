@@ -1,0 +1,27 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "cosmosDB",
+      "name": "calculation",
+      "databaseName": "verduzco-dev-one-dev",
+      "collectionName": "ver_cus_and_subs",
+      "connectionStringSetting": "DB",
+      "direction": "in",
+      "sqlQuery": "SELECT c.id, c.project, c.name, c.description, c.imputs FROM c WHERE c.id = {id} AND c.type = 'calculation' ORDER BY c.created DESC"
+    }
+  ]
+}
