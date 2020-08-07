@@ -3,7 +3,7 @@ module.exports = async function (context, req) {
     if (calculation) {
         context.res = {
             status: 200,
-            body: context.bindings.calculation[0]
+            body: context.bindings.calculation
         };
     }
     else {
