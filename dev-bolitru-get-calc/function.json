@@ -21,6 +21,7 @@
       "collectionName": "ver_cus_and_subs",
       "connectionStringSetting": "DB",
       "direction": "in",
+      "partitionKey": "{key}",
       "sqlQuery": "SELECT c.id, c.project, c.name, c.description, c.imputs FROM c WHERE c.id = {id} AND c.type = 'calculation' ORDER BY c.created DESC"
     }
   ]
