@@ -21,7 +21,8 @@
       "collectionName": "bolitru-client-data",
       "connectionStringSetting": "DB",
       "direction": "in",
-      "sqlQuery": "SELECT c.id, c.name FROM Calculations c WHERE c.project = {project} AND c.owner = {owner} AND c.type = 'calculation' ORDER BY c.created DESC"
+      "partitionKey": "{key}",
+      "sqlQuery": "SELECT c.id, c.name, c.description FROM Calculations c WHERE c.project = {project} AND c.type = 'calculation' ORDER BY c.created DESC"
     }
   ]
 }
