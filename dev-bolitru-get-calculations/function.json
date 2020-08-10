@@ -22,7 +22,7 @@
       "connectionStringSetting": "DB",
       "direction": "in",
       "partitionKey": "{key}",
-      "sqlQuery": "SELECT c.id, c.name, c.description FROM c WHERE c.project = {project} AND c.type = 'calculation' ORDER BY c.created DESC"
+      "sqlQuery": "SELECT c.id, c.name, c.description, c.calculator FROM c WHERE c.project = {project} AND c.type = 'calculation' ORDER BY c.created DESC"
     }
   ]
 }
