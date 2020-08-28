@@ -35,6 +35,7 @@ module.exports = async function (context, req) {
                 }],
                 customer: req.body.customer_id,
                 mode: 'subscription',
+                allow_promotion_codes: true,
                 success_url: req.body.success_url,
                 cancel_url: req.body.cancel_url
             });
@@ -55,6 +56,7 @@ module.exports = async function (context, req) {
                 }],
                 customer: req.body.customer_id,
                 mode: 'subscription',
+                allow_promotion_codes: true,
                 success_url: req.body.success_url,
                 cancel_url: req.body.cancel_url
             });
@@ -75,6 +77,7 @@ module.exports = async function (context, req) {
                 }],
                 customer: req.body.customer_id,
                 mode: 'subscription',
+                allow_promotion_codes: true,
                 success_url: req.body.success_url,
                 cancel_url: req.body.cancel_url
             });
@@ -95,6 +98,7 @@ module.exports = async function (context, req) {
                 }],
                 customer: req.body.customer_id,
                 mode: 'subscription',
+                allow_promotion_codes: true,
                 success_url: req.body.success_url,
                 cancel_url: req.body.cancel_url
             });
@@ -115,6 +119,7 @@ module.exports = async function (context, req) {
                 }],
                 customer: req.body.customer_id,
                 mode: 'subscription',
+                allow_promotion_codes: true,
                 success_url: req.body.success_url,
                 cancel_url: req.body.cancel_url
             });
@@ -135,6 +140,7 @@ module.exports = async function (context, req) {
                 }],
                 customer: req.body.customer_id,
                 mode: 'subscription',
+                allow_promotion_codes: true,
                 success_url: req.body.success_url,
                 cancel_url: req.body.cancel_url
             });
