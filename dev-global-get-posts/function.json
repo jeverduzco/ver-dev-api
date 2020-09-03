@@ -21,7 +21,7 @@
       "collectionName": "ver-blog-posts",
       "connectionStringSetting": "DB",
       "direction": "in",
-      "sqlQuery": "SELECT p.name, p.name_en, p.category, p.category_en, p.created, p.url, p.url_en, p.cover, p.id FROM Posts p WHERE p.published = true ORDER BY p.created DESC"
+      "sqlQuery": "SELECT p.name, p.name_en, p.category, p.category_en, p.created, p.url, p.url_en, p.cover, p.user, p.id FROM Posts p WHERE p.published = true ORDER BY p.created DESC"
     }
   ]
 }
