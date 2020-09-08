@@ -13,15 +13,6 @@
       "type": "http",
       "direction": "out",
       "name": "res"
-    },
-    {
-      "type": "cosmosDB",
-      "name": "contact",
-      "databaseName": "verduzco-dev-one-dev",
-      "collectionName": "ver-help-center",
-      "createIfNotExists": false,
-      "connectionStringSetting": "DB",
-      "direction": "out"
     }
   ]
 }
